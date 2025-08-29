@@ -41,3 +41,31 @@ body {
     margin-top: 0.5rem;
   }
 }
+
+/* Custom Navbar */
+.custom-navbar {
+  background: linear-gradient(90deg, #0056b3, #6610f2); /* Blue to Purple */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff !important; /* White text */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+  color: #ffc107 !important; /* Gold hover */
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffffff !important; /* Brand text */
+  font-weight: 700;
+}
+
+/* Dropdown hover effect */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
