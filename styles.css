@@ -1,7 +1,3 @@
-/* Global tweaks */
-body {
-  background-color: #fff;
-}
 .navbar .nav-link.active {
   font-weight: 600;
 }

@@ -9,8 +9,76 @@
       rel="stylesheet"
     />
     <link href="assets/styles.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background: linear-gradient(#ba5370, #f4e2d8);
+        min-height: 100vh; /* full page height */
+        margin: 0; /* remove white spaces */
+        background-attachment: fixed; /* makes it stay when scrolling */
+      }
+      /* Navbar Enhancement */
+      .navbar {
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .navbar .nav-link {
+        color: #333 !important;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+      }
+      .navbar .nav-link:hover,
+      .navbar .nav-link.active {
+        color: #fff !important;
+        background-color: #0d6efd;
+      }
+
+      /* Header Gradient */
+      /* header {
+        background: linear-gradient(135deg, #0d6efd, #0056b3);
+        color: white;
+      } */
+      header h1,
+      header p {
+        color: white !important;
+      }
+
+      /* Form Styling */
+      .form-control:focus {
+        border-color: #0d6efd;
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+      }
+      button.btn-primary {
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+      button.btn-primary:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      /* Footer Enhancements */
+      .footer-link {
+        color: #f8f9fa;
+        text-decoration: none;
+        position: relative;
+      }
+      .footer-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0;
+        bottom: -2px;
+        background: #0d6efd;
+        transition: width 0.3s ease;
+      }
+      .footer-link:hover::after {
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
+    <!-- NAVBAR -->
     <nav
       class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
     >
@@ -48,13 +116,15 @@
       </div>
     </nav>
 
-    <header class="bg-light border-bottom">
-      <div class="container py-4">
+    <!-- HEADER -->
+    <header class="py-4">
+      <div class="container">
         <h1 class="h3 mb-1">Contact Us</h1>
-        <p class="text-muted mb-0">We’d love to hear from you.</p>
+        <p class="mb-0">We’d love to hear from you.</p>
       </div>
     </header>
 
+    <!-- MAIN CONTENT -->
     <main class="container py-5">
       <div class="row g-5">
         <div class="col-12 col-lg-7">
@@ -81,7 +151,7 @@
                 <div class="invalid-feedback">Please enter your message.</div>
               </div>
               <div class="col-12">
-                <button class="btn btn-primary" type="submit">
+                <button class="btn btn-primary px-4" type="submit">
                   Send Message
                 </button>
               </div>
@@ -105,105 +175,57 @@
       </div>
     </main>
 
-    <!-- NAVBAR -->
-    <!-- AMAZON-STYLE FOOTER -->
+    <!-- FOOTER -->
     <footer class="bg-dark text-light mt-5">
-      <!-- Back to Top -->
       <div class="text-center py-3 bg-secondary">
         <a href="#" class="text-white text-decoration-none">Back to top</a>
       </div>
-
-      <!-- Footer Links -->
       <div class="container py-5">
         <div class="row">
           <div class="col-6 col-md-3">
             <h6 class="text-uppercase fw-bold mb-3">Get to Know Us</h6>
             <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-light text-decoration-none">About Us</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Careers</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Press Releases</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >ShopEase Science</a
-                >
-              </li>
+              <li><a href="#" class="footer-link">About Us</a></li>
+              <li><a href="#" class="footer-link">Careers</a></li>
+              <li><a href="#" class="footer-link">Press Releases</a></li>
+              <li><a href="#" class="footer-link">ShopEase Science</a></li>
             </ul>
           </div>
-
           <div class="col-6 col-md-3">
             <h6 class="text-uppercase fw-bold mb-3">Connect with Us</h6>
             <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-light text-decoration-none">Facebook</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Twitter</a>
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Instagram</a
-                >
-              </li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+              <li><a href="#" class="footer-link">Twitter</a></li>
+              <li><a href="#" class="footer-link">Instagram</a></li>
             </ul>
           </div>
-
           <div class="col-6 col-md-3">
             <h6 class="text-uppercase fw-bold mb-3">Make Money with Us</h6>
             <ul class="list-unstyled">
+              <li><a href="#" class="footer-link">Sell on ShopEase</a></li>
+              <li><a href="#" class="footer-link">Affiliate Program</a></li>
               <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Sell on ShopEase</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Affiliate Program</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Advertise Your Products</a
-                >
+                <a href="#" class="footer-link">Advertise Your Products</a>
               </li>
             </ul>
           </div>
-
           <div class="col-6 col-md-3">
             <h6 class="text-uppercase fw-bold mb-3">Let Us Help You</h6>
             <ul class="list-unstyled">
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Your Account</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none"
-                  >Returns Centre</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-light text-decoration-none">Help</a>
-              </li>
+              <li><a href="#" class="footer-link">Your Account</a></li>
+              <li><a href="#" class="footer-link">Returns Centre</a></li>
+              <li><a href="#" class="footer-link">Help</a></li>
             </ul>
           </div>
         </div>
       </div>
-
-      <!-- Bottom Footer -->
       <div class="bg-secondary text-center py-3">
         <p class="mb-0">
           © <span id="year"></span> ShopEase. All rights reserved.
         </p>
       </div>
     </footer>
+
     <script>
       // Bootstrap form validation
       (() => {
@@ -223,6 +245,8 @@
           );
         });
       })();
+
+      // Dynamic Year
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
